@@ -20,6 +20,7 @@
   flex: 1 1 var(--card-size);
   background: #999;
   font-family: sans-serif;
+  margin-bottom:64px;
 }
 
 .c-container {
@@ -69,14 +70,43 @@
   color: #f00;
 }
 
-.niederflurbus {
+.c-type{
+  min-width: 40px;
+  border-radius: 25px;
+  padding: 2px;
+  color: #fff;
+  text-align: center;
+}
+
+.c-type--niederflurbus {
   background-color: #0a0;
 }
 
-.bus {
+.c-type--bus {
   background-color: #00a;
 }
 
-.s-bahn {
+.c-type--s-bahn {
   background-color: #a00;
+}
+
+.c-explanation{
+  display: flex;
+  position: fixed;
+  width: 390px;
+  justify-content: space-evenly;
+  bottom: 5px;
+  left: 13px;
+  background: #fff;
+  padding: 5px;
+  -webkit-box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 10px -2px rgba(0, 0, 0, 0.5);
+}
+.c-explain{
+  display:flex;
+  align-items: center;
+}
+.c-type-explanation{
+  margin: 0 5px;
 }

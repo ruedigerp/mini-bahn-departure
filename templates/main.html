@@ -16,7 +16,7 @@
     </div>
   {% for line in location.lines %}
   <div class="c-line">
-    <div class="c-line-item {{line.type | lower}} c-line--number">{{line.name}}</div>
+    <div class="c-line-item c-type--{{line.type | lower}} c-line--number">{{line.name}}</div>
     <div class="c-line-item c-line--route">&rarr; {{line.route}}</div>
     <div class="c-line-item c-line--time">{{line.time}}min
     {% if line.delay %}<div class="c-line--delay">(+{{line.delay}})</div>{% endif %}
@@ -25,5 +25,10 @@
   {% endfor %}
 </div>
 {% endfor %}
+<div class="c-explanation">
+  <div class="c-explain"><div class="c-type c-type--bus">123</div><div class="c-type-explanation">Bus</div></div>
+  <div class="c-explain"><div class="c-type c-type--niederflurbus">456</div><div class="c-type-explanation">Niederflurbus</div></div>
+  <div class="c-explain"><div class="c-type c-type--s-bahn">S01</div><div class="c-type-explanation">S-Bahn</div></div>
+</div>
 </body>
 </html>
