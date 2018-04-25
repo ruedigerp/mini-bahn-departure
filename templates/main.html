@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='main.css') }}">
+  <script type="text/javascript">
+  // setTimeout(function(){
+  //   location = ''
+  // },60000)
+</script>
+</head>
+<body class="app">
+  {% for location in context %}
+  <div class="c-container">
+    <div class="c-header">
+      {{location.loc}}
+    </div>
+  {% for line in location.lines %}
+  <div class="c-line">
+    <div class="c-line-item {{line.type | lower}} c-line--number">{{line.name}}</div>
+    <div class="c-line-item c-line--route">&rarr; {{line.route}}</div>
+    <div class="c-line-item c-line--time">{{line.time}}min
+    {% if line.delay %}<div class="c-line--delay">(+{{line.delay}})</div>{% endif %}
+  </div>
+  </div>
+  {% endfor %}
+</div>
+{% endfor %}
+</body>
+</html>
