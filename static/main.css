@@ -59,6 +59,7 @@
   padding: 2px;
   color: #fff;
   text-align: center;
+  background-color: #0aa;
 }
 
 .c-line--time {
@@ -80,3 +81,12 @@
 .s-bahn {
   background-color: #a00;
 }
+.r-bahn {
+  background-color: #aa0;
+
+}
+
+.straßenbahn {
+  background-color: #aa0;
+}
+
