@@ -6,6 +6,7 @@ before_install:
 install:
  - "pip install pytest pytest-coverage python-coveralls"
  - "pip install -r requirements.txt"
+before-script: cp config.py.dist config.py
 script: python -m pytest tests/ --cov=.
 after_success:
   - git config --replace-all remote.origin.fetch +refs/heads/*:refs/remotes/origin/*
