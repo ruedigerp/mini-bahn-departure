@@ -1,6 +1,7 @@
 __pycache__/
 .ropeproject/
-config.py
+# config.py
 package-lock.json
 node_modules/
 .pytest_cache/
+.coverage
